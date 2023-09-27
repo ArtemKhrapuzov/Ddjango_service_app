@@ -3,8 +3,8 @@ from django.db import models
 from django.db.models.signals import post_delete
 
 from clients.models import Client
-from .receivers import delete_cache_total_sum
-from .tasks import *
+from services.receivers import delete_cache_total_sum
+from services.tasks import *
 
 class Service(models.Model):
     name = models.CharField(max_length=50)
